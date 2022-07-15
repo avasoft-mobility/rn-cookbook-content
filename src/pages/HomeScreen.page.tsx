@@ -1,11 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-interface HomeScreenProps {
-  navigation: any;
-}
-
-const HomeScreen: React.FC<HomeScreenProps> = props => {
+const HomeScreen: React.FC = props => {
   return (
     <View style={Styles.parentContainer}>
       <Text style={Styles.textContainer}>HomeScreen</Text>
