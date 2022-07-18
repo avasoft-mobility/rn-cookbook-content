@@ -1,21 +1,36 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import {
+  NavigationParams,
+  NavigationScreenProp,
+  NavigationState,
+} from 'react-navigation';
 
-const HomeScreen: React.FC = props => {
+interface HomeScreenProps {
+  navigation: NavigationScreenProp<NavigationState, NavigationParams>;
+}
+
+const HomeScreen: React.FC<HomeScreenProps> = props => {
   return (
-    <View style={Styles.parentContainer}>
-      <Text style={Styles.textContainer}>HomeScreen</Text>
+    <View style={styles.parentContainer}>
+      <Text style={styles.text}>Home Screen</Text>
+      <Button
+        title="Submit"
+        onPress={() =>
+          props.navigation.navigate('DetailScreen', {name: 'Alexa', age: 24})
+        }
+      />
     </View>
   );
 };
 
-const Styles = StyleSheet.create({
+const styles = StyleSheet.create({
   parentContainer: {
-    width: '100%',
-    height: '100%',
+    flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
   },
-  textContainer: {
+  text: {
     color: '#000000',
     alignSelf: 'center',
   },
