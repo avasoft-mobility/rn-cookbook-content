@@ -1,18 +1,10 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
-interface HomeScreenProps {
-  navigation: any;
-}
-
-const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
+const HomeScreen: React.FC = () => {
   return (
     <View style={Styles.parentContainer}>
-      <Text style={Styles.textContainer}>Home</Text>
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate('Settings')}
-      />
+      <Text style={Styles.textContainer}>Home Screen</Text>
     </View>
   );
 };
