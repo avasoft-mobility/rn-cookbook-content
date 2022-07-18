@@ -12,14 +12,14 @@ interface DetailScreenProps {
 
 const DetailScreen: React.FC<DetailScreenProps> = props => {
   return (
-    <View style={Styles.parentContainer}>
-      <Text style={Styles.text}>Detail Screen</Text>
+    <View style={styles.parentContainer}>
+      <Text style={styles.text}>Detail Screen</Text>
       <Button title="Go back" onPress={() => props.navigation.goBack()} />
     </View>
   );
 };
 
-const Styles = StyleSheet.create({
+const styles = StyleSheet.create({
   parentContainer: {
     flex: 1,
     alignItems: 'center',
