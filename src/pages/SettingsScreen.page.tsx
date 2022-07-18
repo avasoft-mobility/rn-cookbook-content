@@ -1,18 +1,15 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 
-interface HomeScreenProps {
+interface SettingsScreenProps {
   navigation: any;
 }
 
-const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
+const SettingsScreen: React.FC<SettingsScreenProps> = ({navigation}) => {
   return (
     <View style={Styles.parentContainer}>
-      <Text style={Styles.textContainer}>Home</Text>
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate('Settings')}
-      />
+      <Text style={Styles.textContainer}>Settings</Text>
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
     </View>
   );
 };
@@ -29,4 +26,4 @@ const Styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default SettingsScreen;
