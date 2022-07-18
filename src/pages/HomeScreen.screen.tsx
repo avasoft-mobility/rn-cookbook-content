@@ -10,8 +10,8 @@ const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
     <View style={Styles.parentContainer}>
       <Text style={Styles.textContainer}>Home</Text>
       <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate('Settings')}
+        title="Go to Help Screen"
+        onPress={() => navigation.push('Help')}
       />
     </View>
   );

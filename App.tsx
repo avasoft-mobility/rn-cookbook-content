@@ -4,8 +4,8 @@ import {Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 
-import HomeScreen from './src/pages/HomeScreen.page';
-import SettingsScreen from './src/pages/SettingsScreen.page';
+import HomeStackScreen from './src/pages/HomeStackScreen.screen';
+import SettingsScreen from './src/pages/SettingsScreen.screen';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +15,7 @@ const App = () => {
       <Tab.Navigator
         screenOptions={({route}) => ({
           tabBarIcon: ({focused}) => {
-            if (route.name === 'Home' && focused) {
+            if (route.name === 'HomeStack' && focused) {
               return (
                 <Image
                   style={{width: 40, height: 30}}
@@ -24,7 +24,7 @@ const App = () => {
               );
             }
 
-            if (route.name === 'Home' && !focused) {
+            if (route.name === 'HomeStack' && !focused) {
               return (
                 <Image
                   style={{width: 40, height: 30}}
@@ -56,9 +56,9 @@ const App = () => {
           tabBarInactiveTintColor: 'gray',
         })}>
         <Tab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{headerShown: false}}
+          name="HomeStack"
+          component={HomeStackScreen}
+          options={{headerShown: false, tabBarLabel: 'Home'}}
         />
         <Tab.Screen
           name="Settings"
