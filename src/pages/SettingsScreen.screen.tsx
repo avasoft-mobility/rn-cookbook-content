@@ -1,19 +1,19 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-const HomeScreen: React.FC = props => {
+const SettingsScreen: React.FC = () => {
   return (
     <View style={Styles.parentContainer}>
-      <Text style={Styles.textContainer}>HomeScreen</Text>
+      <Text style={Styles.textContainer}>Settings Tab</Text>
     </View>
   );
 };
 
 const Styles = StyleSheet.create({
   parentContainer: {
-    width: '100%',
-    height: '100%',
+    flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
   },
   textContainer: {
     color: '#000000',
@@ -21,4 +21,4 @@ const Styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default SettingsScreen;
