@@ -6,18 +6,15 @@ import {
   NavigationState,
 } from 'react-navigation';
 
-interface HomeScreenProps {
+interface DetailScreenProps {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 }
 
-const HomeScreen: React.FC<HomeScreenProps> = props => {
+const DetailScreen: React.FC<DetailScreenProps> = props => {
   return (
     <View style={styles.parentContainer}>
-      <Text style={styles.text}>Home Screen</Text>
-      <Button
-        title="Push to new screen"
-        onPress={() => props.navigation.navigate('DetailScreen')}
-      />
+      <Text style={styles.text}>Detail Screen</Text>
+      <Button title="Go back" onPress={() => props.navigation.goBack()} />
     </View>
   );
 };
@@ -34,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default DetailScreen;
